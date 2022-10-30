@@ -6,6 +6,7 @@
     background-color: skyblue;
     font-size: 24px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
 }
 .bar {
     float: left;
@@ -14,10 +15,10 @@
 li a,
 .drop {
     display: inline-block;
-    color: aqu;
     text-align: center;
     padding: 10px 12px;
     text-decoration: none;
+    color: black;
 }
 
 li a:hover,
