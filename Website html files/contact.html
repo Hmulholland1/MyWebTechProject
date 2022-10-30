@@ -19,11 +19,28 @@
             padding: 20px;
         }
 
+        #div2 {
+            background-color: darkorange;
+            margin: 20px;
+            padding: 20px;
+        }
+
         div {
             margin: 10px;
             align-items: center;
             align-content: center;
             text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        p{
+            font-size: 30px;
+        }
+        #henry{
+            width: 500px;
+            border: 2px solid whitesmoke;
         }
     </style>
     <meta charset="UTF-8">
@@ -49,7 +66,15 @@
         </li>
     </ul>
     <div id="div1">
-        <form action="mailto:hmulholland1@babson.edu" method="get" enctype="application/x-www-form-urlencoded" >
+        <h1>Contacts</h1>
+        <p>Website Author: Henry Mulholland</p>
+        <p>Email: hmulholland1@babson.edu</p>
+        <p>Phone Number: 978-810-6556</p>
+        <img src="/images/Henry Mulholland.JPG" id="henry" alt="Henry" title="Henry Mulholland">
+    </div>
+    <div id="div2">
+        <h1>Feedback Form</h1>
+        <form action="mailto:hmulholland1@babson.edu" method="get" enctype="application/x-www-form-urlencode">
             <div> <label for="Last-Name" class="text-label"> Last Name:</label>
                 <input type="text" id="Last-Name" Name="Last Name" size="30" placeholder="Last Name" />
             </div>
@@ -60,7 +85,7 @@
                 <label for="Email" class="text-label"> Email:</label>
                 <input type="text" id="Email" Name="Email" size="30" placeholder="Email Address" />
             </div>
-            <div id="div2">
+            <div>
             </div>
             <div>
                 <div>
