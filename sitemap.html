@@ -53,8 +53,10 @@
         video {
             width: 500px;
         }
-        #video1{
+
+        #video1 {
             text-align: center;
+            display: none;
         }
 
         body {
@@ -75,13 +77,13 @@
         <li class="bar"><a href="index.html">Home</a></li>
         <li class="bar"><a href="History.html">Farm History</a></li>
         <li class="dropdown">
-            <a href="javascript:void(0)" class="drop">Pages</a>
+            <a href="javascript:void(0)" class="drop">How The Cheese Is Made</a>
             <div class="content">
-                <a href="/content1.html">Milking</a>
-                <a href="/content2.html">Pasteurizing</a>
-                <a href="/content3.html">Cheesemaking</a>
+                <a href="/Milking.html">Milking</a>
+                <a href="/Pasteurizing.html">Pasteurizing</a>
+                <a href="/Cheesemaking.html">Cheesemaking</a>
             </div>
-        </li>        
+        </li>
         <li class="bar"><a href="contact.html">Contact</a></li>
         <li class="bar"><a href="sitemap.html">Sitemap</a></li>
     </ul>
@@ -108,18 +110,29 @@
             </tr>
         </table>
     </div>
-    <div>
+    <div id="toggle">
         <hr>
-        <h1>Secret Sleeply Goat Video</h1>
+        <h1>Hover here for something special</h1>
         <hr>
     </div>
     <div id="video1">
-            <video autoplay muted>
-                <source src="/images/IMG_0186 (video-converter.com).mp4" type="video/mp4">
-                <source src="/images/IMG_0186 (video-converter.com).ogg" type="video/ogg">
-            </video>
+        <video autoplay muted>
+            <source src="/images/IMG_0186 (video-converter.com).mp4" type="video/mp4">
+            <source src="/images/IMG_0186 (video-converter.com).ogg" type="video/ogg">
+        </video>
     </div>
+    <script>
+function f() {
+    console.log("safaf")
+        const video1El = document.getElementById("video1");
+        video1El.style.display = "block";
+      }
 
+      document.querySelector("toggle").addEventListener("onmouseover", function () {
+        console.log("safaf")
+        f();
+      });
+    </script>
 </body>
 
 </html>
