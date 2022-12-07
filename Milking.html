@@ -45,9 +45,28 @@
         content="Babson, Webtech, index, topsfield, cheesemaking, valley view farm, goats, farmstead, baby goats,">
     <meta name="author" content="Henry Mulholland">
     <link rel="icon" href="/images/favicon-32x32.png" />
+    <script>
+        
+        let counter = 0
+        let photo = ["images/slide1.jpg",
+            "images/slide2.jpg",
+            "images/slide3.jpg",
+            "images/slide6.jpg",]
+
+        function slideshow() {
+            document.getElementById('goat1').src = photo[counter]
+            document.getElementById('goat1').style = {width: 500}
+            counter = counter + 1
+            if (counter >= photo.length)
+            {
+                counter = 0
+            }
+            setTimeout(slideshow, 1000)
+        }
+    </script>
 </head>
 
-<body>
+<body onload = slideshow()>
     <ul id="navbar">
         <li class="bar"><a href="index.html">Home</a></li>
         <li class="bar"><a href="History.html">Farm History</a></li>
@@ -64,7 +83,7 @@
     </ul>
     <div>
         <h1> The Milking Process</h1>
-        <img src="/images/DSC_2521.jpg" id="goat1" alt="goats1" title="Goats waiting for grain">
+        <img src="/images/slide1.jpg" id="goat1" class="pic" alt="goats1" title="Goats waiting for grain">
         <p>Dairy goats like cows, are milked twice a day about twelve hours apart to maximize their production. But
             unlike
             the typical cow dairy, the goats at Valley View Farm are bred seasonall (in October and November) to “kid”
@@ -94,7 +113,7 @@
             the
             rest.</p>
         <hr>
-            <img src="/images/DSC_2531.jpg" id="goat2" alt="goats1" title="Milking Machine">
+            <img src="/images/slide1.jpg" id="goat2" class="pic" alt="goats2" title="Milking Machine">
         <p>The female goats come into the milking parlor twice a day through a doorway from their pen and up a set of
             ramps
             to an elevated platform where they can eat their grain and be milked from behind with an automated bucket

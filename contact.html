@@ -73,7 +73,7 @@
         <p>Website Author: Henry Mulholland</p>
         <p>Email: hmulholland1@babson.edu</p>
         <p>Phone Number: 978-810-6556</p>
-        <img src="/images/Henry Mulholland.JPG" id="henry" alt="Henry" title="Henry Mulholland">
+        <img onmouseover=imagechange() src="/images/Henry Mulholland.JPG" id="henry" alt="Henry" title="Henry Mulholland">
     </div>
     <div id="div2">
         <h1>Feedback Form</h1>
@@ -85,7 +85,7 @@
                 <input type="text" id="First-Name" Name="First Name" size="30" placeholder="First Name" />
             </div>
             <div> <label for="Email" class="text-label"> Email:</label>
-                <input type="text" id="Email" Name="Email" size="30" placeholder="Email Address" />
+                <input type="text" id="email" Name="Email" size="30" placeholder="Email Address" />
             </div>
             <div>
             </div>
@@ -106,6 +106,38 @@
             </button>
         </form>
     </div>
+    <script>
+        function imagechange() {
+            let image2 = "images/henry2.jpg"
+            document.getElementById("henry").src = image2
+        }
+
+        function validate()
+        {
+            if (document.getElementById("First-Name").value == "")
+            {
+                alert("First name is required")
+                document.getElementById("First-Name").focus()
+                return false
+            }
+            if (document.getElementById("Last-Name").value == "")
+            {
+                alert("Last name is required")
+                document.getElementById("Last-Name").focus()
+                return false
+            }
+            if (document.getElementById("email").value == "")
+            {
+                alert("Email address is required")
+                document.getElementById("email").focus()
+                return false
+            }
+            else
+            {
+                return true
+            }
+        }
+    </script>
 </body>
 
 </html>

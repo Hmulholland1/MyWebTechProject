@@ -59,12 +59,20 @@
 
         #video1 {
             text-align: center;
-            /*display: none;*/
+            display: none;
         }
 
         body {
             background-image: url("/images/IMG_0789.jpg");
             width: 100%;
+        }
+        #toggle{
+            text-align: center;
+        }
+        button {
+            border: none;
+            background-color: transparent;
+            font-size: 200%;
         }
     </style>
     <meta charset="UTF-8">
@@ -115,7 +123,7 @@
     </div>
     <div id="toggle">
         <hr>
-        <h1>Hover here for something special</h1>
+        <button id="btn">Click here for something special</button>
         <hr>
     </div>
     <div id="video1">
@@ -126,13 +134,12 @@
     </div>
     <script>
 function f() {
-    console.log("safaf")
         const video1El = document.getElementById("video1");
         video1El.style.display = "block";
+        document.getElementById("btn").innerHTML = "Surprise! It's a Baby Goat!"
       }
 
-      document.querySelector("toggle").addEventListener("onmouseover", function () {
-        console.log("safaf")
+      document.querySelector("button").addEventListener("click", function () {
         f();
       });
     </script>
